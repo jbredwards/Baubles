@@ -72,3 +72,13 @@ artifacts {
     archives apiZip
     archives sourcesJar
 }
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifact jar
+            artifact deobfJar
+            artifact sourcesJar
+        }
+    }
+}
